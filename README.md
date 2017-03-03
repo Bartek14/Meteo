@@ -1,0 +1,2 @@
+# Meteo
+Projekt stacji meteorologicznej
