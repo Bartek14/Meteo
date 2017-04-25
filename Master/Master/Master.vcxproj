@@ -47,7 +47,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>F:\programming\Arduino\libraries;F:\programming\Arduino\hardware\arduino\avr\libraries;C:\Users\mpiot\Documents\Arduino\libraries;F:\programming\Arduino\hardware\arduino\avr\cores\arduino;F:\programming\Arduino\hardware\arduino\avr\variants\standard;$(ProjectDir)..\Master;F:\programming\Arduino\hardware\tools\avr\avr\include\;F:\programming\Arduino\hardware\tools\avr\avr\include\avr\;F:\programming\Arduino\hardware\tools\avr\lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>F:\programming\Arduino\libraries\LiquidCrystal\src;F:\programming\Arduino\libraries;F:\programming\Arduino\hardware\arduino\avr\libraries;C:\Users\mpiot\Documents\Arduino\libraries;F:\programming\Arduino\hardware\arduino\avr\cores\arduino;F:\programming\Arduino\hardware\arduino\avr\variants\standard;$(ProjectDir)..\Master;F:\programming\Arduino\hardware\tools\avr\avr\include\;F:\programming\Arduino\hardware\tools\avr\avr\include\avr\;F:\programming\Arduino\hardware\tools\avr\lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ProjectDir)__vm\.Master.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;F_CPU=16000000L;ARDUINO=10801;ARDUINO_AVR_UNO;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -82,7 +82,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\DataCollectingSystem.hpp" />
     <ClInclude Include="__vm\.Master.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\DataCollectingSystem.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
