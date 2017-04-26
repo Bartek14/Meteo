@@ -17,17 +17,5 @@
   <ItemGroup>
     <None Include="Master.ino" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="__vm\.Master.vsarduino.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\DataCollectingSystem.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\DataCollectingSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
+ 
 </Project>
