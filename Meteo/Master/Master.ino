@@ -4,12 +4,24 @@
  Author:	mpiot
 */
 
-// the setup function runs once when you press reset or power the board
-void setup() {
+#include "FileSupport.h"
+#include "WirelessSupport.h"
 
+void setup() 
+{
+	pinMode(13, OUTPUT);
+	pinMode(12, OUTPUT);
+	pinMode(11, OUTPUT);
+
+	digitalWrite(13, HIGH);
+	digitalWrite(12, LOW);
+	digitalWrite(13, HIGH);
+
+	Serial.begin(9600);
+	Serial.println(sizeof(TIMEDATA));
 }
 
-// the loop function runs over and over again until power down or reset
-void loop() {
-  
+void loop() 
+{
+	
 }
