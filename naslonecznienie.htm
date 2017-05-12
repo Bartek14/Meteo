@@ -1,0 +1,111 @@
+<script>
+  var i = new Array(10);
+  var it = new Array(10);
+  //Temperatura
+  i[0] = 1;
+  it[0] = 1;
+
+</script>
+
+<!DOCTYPE HTML>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8"/>
+    <http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Oto strona</title>
+    <meta name="description" content="Stacja meteorologiczna"/>
+
+
+        <link rel="stylesheet" href="lato.css" type="text/css"/>
+        <link rel="stylesheet" href="style_portfolio.css" type="text/css"/>
+        <link rel="stylesheet" href="css/fontello.css" type="text/css"/>
+        <script type="text/javascript" src="clock.js"></script>
+        <script src="chartkick.js"></script>
+        <script src="Chart.bundle.js"></script>
+        <script src="loader.js"></script>
+
+
+
+
+    <script>
+
+       var CustomAdapter = new function () {
+         this.name = "custom";
+
+         this.renderLineChart = function (chart) {
+           chart.getElement().innerHTML = "Hi";
+         };
+
+         this.renderCustomChart = function (chart) {
+           chart.getElement().innerHTML = "Custom Chart";
+         };
+       };
+
+       Chartkick.CustomChart = function (element, dataSource, options) {
+         Chartkick.createChart("CustomChart", this, element, dataSource, options);
+       };
+
+       Chartkick.adapters.unshift(CustomAdapter);
+     </script>
+
+     <style>
+       body {
+         padding: 20px;
+         margin: 0;
+         font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+       }
+
+       h1 {
+         text-align: center;
+       }
+     </style>
+
+      </head>
+        <body  onload="counting();">
+          <div id="container">
+
+              <div class="rectangle">
+                  <div id="logo"><a href="meteo.htm" class="hed">Stacja Meteo</a></div>
+                  <div id="clock"></div>
+                  <div style="clear:both;">
+              </div>
+            </div>
+
+          <div class="square">
+              <div class="tile1">
+                <a href="temperatura.htm" class="tilelink"><i class="icon-temperature"></i><br/>Temperatura</a>
+              </div>
+              <div class="tile1">
+                <a href="wiatr.htm" class="tilelink"><i class="icon-wind"></i><br/>Wiatr</a>
+              </div>
+              <div style="clear:both;"></div>
+              <div class="tile2">
+                <a href="wilgotnosc.htm" class="tilelink"><i class="icon-cloud-wind"></i><br/>Wilgotność</a>
+              </div>
+              <div class="tile3">
+                <a href="naslonecznienie.htm" class="tilelink">  <i class="icon-sun"></i><br/>Nasłonecznienie</a>
+              </div>
+              <div style="clear:both;"></div>
+              <div class="tile4">
+                  <a href="cisnienie.htm" class="tilelink">  <i class="icon-fog"></i><br/>Ciśnienie</a>
+              </div>
+          </div>
+          <div class="square">
+              <div class="tile5">
+                <div id="line" style="height: 330px;">
+                  <script>
+                  var lol = 11;
+                    new Chartkick.LineChart("line", [["0",32],["1",46],["2",28],["3",21],["4",20],["5",13],["6",29]],
+                    {xtitle: "Data", ytitle: "Nasłonecznienie [lux]"},{max: 80});
+                  </script>
+                    </div>
+          <div style="clear:both;"></div>
+
+                    <div style="clear:both;"></div>
+                  </div>
+                  </div>
+                    <div class="rectangle"> Dzień dobry <a href="log_pan.htm" class="foot"> Panel administracyjny</a></div>
+          </div>
+
+    </body>
+</html>
